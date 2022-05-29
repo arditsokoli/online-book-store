@@ -1,5 +1,9 @@
 # Projekt - Inxhinieri Softi
 ** Anetare
+Ardit Sokoli
+Ardiana Ferati
+Besmira Vladi
+Eftimi Zhuli
 - Prova
 
 
