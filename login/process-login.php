@@ -56,7 +56,7 @@ $pass = $arr["password"];
 if ($arr["role_id"] == ADMIN_ROLE_ID) {
     if ($pass == $_POST["password"]) {
         init_session($arr);
-        header("Location: ../admin/index.php");
+        header("Location: ../admin/dashboard.php");
     }
     else {
         redirect("User not found");

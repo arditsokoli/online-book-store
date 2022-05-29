@@ -1,8 +1,8 @@
 <?php
-define('DB_HOST', 'sql303.unaux.com');
-define('DB_NAME', 'unaux_31637256_b');
-define('DB_USER','unaux_31637256');
-define('DB_PASSWORD','sdgs1233nj2');
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'book_store');
+define('DB_USER','root');
+define('DB_PASSWORD','');
 
 $conn=mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD) or die("Failed to connect to MySQL: " . mysql_error());
 $db=mysqli_select_db($conn,DB_NAME) or die("Failed to connect to MySQL: " . mysql_error());
