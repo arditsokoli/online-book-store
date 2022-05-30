@@ -82,6 +82,7 @@
             </li>';
                 } else {
                     echo ' <li> <a href="#" class="btn btn-lg"> Hello ' . $_SESSION['first_name'] . '.</a></li>
+                    <li> <a href="./user/reset.php" class="btn btn-lg"> Settings </a> </li>;
                     <li> <a href="cart.php" class="btn btn-lg"> Cart </a> </li>; 
                     <li> <a href="destroy.php" class="btn btn-lg"> LogOut </a> </li>';
                 }

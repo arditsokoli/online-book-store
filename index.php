@@ -21,11 +21,11 @@ if (isset($_GET['response'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Books">
-    <meta name="author" content="Shivangi Gupta">
     <title>Online Bookstore</title>
     <!-- Bootstrap -->
     <link href="./resource/static/css/bootstrap.min.css" rel="stylesheet">
     <link href="./resource/static/css/my.css" rel="stylesheet">
+    <link href="./resource/static/css/style.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="favicon.png">
     <style>
         .modal-body ul{list-style:none;}
@@ -56,6 +56,20 @@ if (isset($_GET['response'])) {
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <?php
+                if ((isset($_SESSION["role_id"])) && ($_SESSION["role_id"] == ADMIN_ROLE_ID)) {
+                    echo' <li> <a href="#" class="btn btn-lg"> Hello ' .$_SESSION['first_name']. '.</a></li>';
+                ?>
+                    <li> <a href="index.php" class="btn btn-lg">Cataloge</a> </li>;
+                    <li> <a href="admin/dashboard.php" class="btn btn-lg"> Admin Home </a> </li>;
+                    <li> <a href="admin/add-book.php" class="btn btn-lg"> Add Book </a> </li>;
+                    <li> <a href="user/reset.php" class="btn btn-lg"> Settings </a> </li>;
+                    <li> <a href="destroy.php" class="btn btn-lg"> LogOut </a> </li>';
+                    <?php
+                }
+                else {
+                ?>
+
+                <?php
                 if(!isset($_SESSION['email']))
                 {
                     echo'
@@ -69,8 +83,10 @@ if (isset($_GET['response'])) {
                 }
                 else
                 {   echo' <li> <a href="#" class="btn btn-lg"> Hello ' .$_SESSION['first_name']. '.</a></li>
+                     <li> <a href="./user/reset.php" class="btn btn-lg"> Settings </a> </li>;
                     <li> <a href="cart.php" class="btn btn-lg"> Cart </a> </li>; 
                     <li> <a href="destroy.php" class="btn btn-lg"> LogOut </a> </li>';
+                }
                 }
                 ?>
             </ul>

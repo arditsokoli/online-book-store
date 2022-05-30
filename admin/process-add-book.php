@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$form_url = "./add-film.php";
+$form_url = "./add-book.php";
 if (!(
         isset($_POST["title"]) &&
         isset($_POST["authori"]) &&
@@ -22,7 +22,7 @@ if (!(
 }
 
 if ($_POST["exists"]) {
-    $form_url = "./edit-film.php?id=" . $_POST["id"] . "&err=";
+    $form_url = "./edit-book.php?id=" . $_POST["id"] . "&err=";
 }
 else {
     $form_url = $form_url . "?err=";

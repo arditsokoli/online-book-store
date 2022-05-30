@@ -357,18 +357,14 @@ input[type="text"],input[type="hidden"],input[type="date"],input[type="number"],
 
 }
 .btn-outline-danger{
-    background-color: #ff9b8e;
+    background-color: #ff8484;
+
 }
+/* Responsive css Design */
 .btn{
     color: white;
     margin-left: 10px;
 }
-.form-control1{
-    color: black;
-    background-color: white;
-}
-/* Responsive css Design */
-
 
 /* Javascript class add or remove */
 .input {

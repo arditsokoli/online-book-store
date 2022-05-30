@@ -89,11 +89,11 @@ if (isset($_GET['response'])) {
             </li>';
                 }
                 else
-                {   echo' <li> <a href="#" class="btn btn-lg"> Hello ' .$_SESSION['first_name']. '.</a></li>
-                    
-                    <li> <a href="cart.php" class="btn btn-lg"> Admin Home </a> </li>; 
-                    <li> <a href="cart.php" class="btn btn-lg"> Add Book </a> </li>; 
-                    <li> <a href="cart.php" class="btn btn-lg"> Settings </a> </li>; 
+                {   echo' <li > <a href="#" style="font-size: 20px;"> Hello ' .$_SESSION['first_name']. '.</a></li>
+                    <li> <a href="../index.php" class="btn btn-lg">Cataloge</a> </li>;
+                    <li> <a href="dashboard.php" class="btn btn-lg"> Admin Home </a> </li>; 
+                    <li> <a href="add-book.php" class="btn btn-lg"> Add Book </a> </li>; 
+                    <li> <a href="../user/reset.php" class="btn btn-lg"> Settings </a> </li>; 
                     <li> <a href="../destroy.php" class="btn btn-lg"> LogOut </a> </li>';
                 }
                 ?>
@@ -133,8 +133,8 @@ if (isset($_GET['response'])) {
                         $title = $arr["title"];
                         // TODO
                         $show_path = "../description.php";
-                        $edit_path = "../admin/edit-film.php";
-                        $delete_path = "../admin/delete-film.php";
+                        $edit_path = "../admin/edit-book.php";
+                        $delete_path = "../admin/delete-book.php";
                         ?>
                         <tr>
                             <td class="th-table"><?php echo $id; ?></td>

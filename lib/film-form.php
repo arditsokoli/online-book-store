@@ -1,11 +1,13 @@
 <?php
 require_once("dbconnect.php");
 ?>
-<form id="role-form" class="cataloge" method="post" action="../admin/process-add-film.php" enctype="multipart/form-data">
-    <div class="container">
+
+<form id="role-form" class="cataloge" method="post" action="../admin/process-add-book.php" enctype="multipart/form-data">
+
+    <h2 class="h-form">Add film</h2>
+    <div class="container-fluid text-center" id="new">
         <div class="row">
-            <h2 class="h-form">Add film</h2>
-            <div class="col-sm">
+            <div class="col-sm-6 col-md-6 col-lg-6">
                 <input type="hidden" id="exists" name="exists" value=<?php echo "\"$exists\"" ?>>
     <?php
     if ($exists) {
@@ -88,7 +90,7 @@ require_once("dbconnect.php");
                     >
                     <span class="error_form"></span>
                 </div>
-
+                <div>
                 <label for="publisher">Publisher</label>
                 <input type="text"
                        id="publisher"
@@ -123,7 +125,8 @@ require_once("dbconnect.php");
             >
             <span class="error_form"></span>
         </div>
-
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6">
             <div>
                 <label for="description">Description</label>
                 <input type="text"
@@ -207,6 +210,7 @@ require_once("dbconnect.php");
     <div class="film-submit">
     <input type="submit" value="submit"  class="form-control1 btn-sec">
     </div>
+   </div>
     </div>
     </div>
     </div>

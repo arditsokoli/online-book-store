@@ -16,8 +16,14 @@ if ($allow) {
         <?php
     }
 }
+
+if (mysqli_query($conn, $query)) {
+    header("Location: ./dashboard.php?Message=Product deleted !!!");
+    die();
+}
+else {
+    header("Location: ./dashboard.php?Message=Cannot deleted !!!");
+    die();
+}
 ?>
 
-    <a class="btn btn-primary" href="../admin/dashboard.php">Go back</a>
-</body>
-</html>
